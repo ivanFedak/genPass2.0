@@ -1,0 +1,88 @@
+@import './services/mixins'
+@import './services/icons' 
+ 
+
+
+//-----fonts--------//
+// @import './services/fonts'
+
+// font-family: Roboto, sans-serif (300, 500, 700, 900)
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic)
+
+
+//ctr + shift + p
+
+//&display=swap
+
+
+//--------------------------------------------------------------------------------------------------\\
+
+// $maxWidth: 1440
+
+$maxWidthContainer: 1140 + 30
+//+ 30px
+  
+  
+$md1: $maxWidthContainer + 12
+$md2: 991.98 
+$md3: 767.98
+$md4: 479.98
+
+
+$mainColor: #fff
+
+
+
+
+
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  font-family: Poppins
+  font-size: 16px
+  color: $mainColor
+
+
+
+html,body
+  height: 100%
+
+
+
+  
+._container
+  max-width: $maxWidthContainer + px
+  padding: 0 15px
+  margin: 0 auto
+
+.wrapper 
+  min-height: 100%
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  // background-color: 
+
+.page 
+  flex: 1 1 auto
+
+._lock
+  overflow: hidden
+
+// ----------Default settings
+@import './services/default'
+// @import './services/swipper'
+@import './modules/ui' 
+
+
+//-----------Componets import-----------------\\
+
+  
+@import './components/header'
+@import './components/main'
+@import './components/footer'
+
+
+//-----------Componets import-----------------\\
+
