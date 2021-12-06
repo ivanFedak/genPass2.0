@@ -18,14 +18,21 @@
         <div class="main">
             <div class='main__container _container'>
                 <div class="main__title">Password Generator</div>
-                <div class="main__password">12020qqwwwd33//..334,4.,,32</div>
-                <div class="main__lenghtBlock">
-                    <div class="main__lengthNum">Length <span>5</span></div>
-                    <input  type='range' name='form[]' class='main__length'>
+                <div class="main__password">12020qqwwwd33//.. 334,4.,,32</div>
+
+                <div class="main__lenght length-main">
+                    <div class="length-main__title">Length:  <span>5</span></div>
+                    <div class="length-main__body">
+                        <div class="length-main__min">4</div>
+                        <input  type='range' name='form[]' class='length-main__length' min="4" max="32" value="20">
+                        <div class="length-main__max">32</div>
+                    </div>
                 </div>
+
                 <div class="main__setting setting-main">
                     <div class="setting-main__title">Settings</div>
                     <div class="setting-main__body">
+
                         <div class="setting-main__item">
                             <div class="setting-main__text">Include Uppercase</div>
                             <input type='checkbox' name='form[]' class='setting-main__check'>
@@ -46,9 +53,9 @@
                             <input type='checkbox' name='form[]' class='setting-main__check'>
                         </div>
                     </div>
-
                 </div>
-                <button class="main__btn">Click on me</button>
+                
+                <button class="main__btn">Generate Password</button>
             </div>
         </div>
 

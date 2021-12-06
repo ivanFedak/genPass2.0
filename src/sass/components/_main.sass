@@ -1,48 +1,33 @@
 .main
     padding-top: 100px
     padding-bottom: 100px
-    // .main__container
-
     &__container
         max-width: 750px
         padding: 25px
         display: flex
         flex-direction: column
         background: rgb(11,13,47)
-        border-radius: 5px
-    // .main__title
-
+        border-radius: 15px
+        @media (max-width: $md4 + px)//Less 479
+           padding: 10px
+           box-shadow: none
     &__title
         font-size: 26px
         font-weight: 600
         &:not(:last-child)
             margin-bottom: 30px
-    // .main__password
-
     &__password
         background-color: #26294e
         padding: 20px
         border-radius: 8px
         text-align: center
         font-size: 22px
-    // .main__lenghtBlock
-
-    &__lenghtBlock
-    // .main__lengthNum
-
-    &__lengthNum
-    
-
-    // .main__length
-
-    &__length
-    // .main__setting
-
+        margin-bottom: 12px
+        @media (max-width: $md3 + px) //Less 768
+            @include adaptiv-value('padding-top', 20, 10, 1)
+            @include adaptiv-value('padding-bottom', 20, 10, 1)
+            @include adaptiv-value('font-size', 22, 15, 1)
     &__setting
-    
-
-    // .main__btn
-
     &__btn
         display: flex
         flex-direction: column
@@ -55,16 +40,53 @@
         transition: all 0.3s ease 0s
         text-transform: uppercase
         font-size: 20px
-        font-weight: 500
+        font-weight: 600
         border-radius: 8px
         margin-top: 20px
         @media (any-hover: hover )
             &:hover
                 transform: translateY(-3%)
                 box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08)
-.setting-main
-    // .setting-main__item
+.length-main
+    &:not(:last-child)
+        margin-bottom: 12px
     &__title
+        color: rgb(119,122,151)
+        @include adaptiv-value('font-size', 18, 14, 1)
+        font-weight: 500
+        text-transform: uppercase
+    &__body
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background-color: #26294e
+        padding: 15px
+        border-radius: 5px
+        position: relative
+        transition: all 0.3s ease 0s
+        @media (max-width: $md3 + px) //Less 768
+            @include adaptiv-value('padding-top', 15, 10, 1)
+            @include adaptiv-value('padding-bottom', 15, 10, 1)
+    &__length
+        margin: 0 10px
+        width: 100%
+        height: 3px
+        -webkit-appearance: none
+        outline: none
+        background: -webkit-linear-gradient(left,#1421c5 0%, #1421c5 50%, #6d7080 50%, #6d7080 100% )
+        border: none
+        border-radius: 8px
+        transition: all 0.3s ease 0s
+        &::-webkit-slider-thumb
+            -webkit-appearance: none
+            width: 20px
+            height: 20px
+            background: #ffffff
+            border-radius: 50%
+            
+.setting-main
+    &__title
+        @include adaptiv-value('font-size', 18, 14, 1)
         color: rgb(119,122,151)
         font-weight: 500
         text-transform: uppercase
@@ -77,15 +99,57 @@
         background-color: #26294e
         padding: 15px
         border-radius: 5px
+        position: relative
+        transition: all 0.3s ease 0s
+        cursor: pointer
+        @media (max-width: $md3 + px) //Less 768
+            @include adaptiv-value('padding-top', 15, 10, 1)
+            @include adaptiv-value('padding-bottom', 15, 10, 1)
         &:not(:last-child)
             margin-bottom: 10px
-    // .setting-main__text
+        &::before
+            content: ''
+            width: 65px
+            height: 40px
+            border-radius: 20px
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 12px
+            background-color: rgba(109,112,128)
+            transition: all 0.3s ease 0s
+        &::after
+            content: ''
+            position: absolute
+            width: 30px
+            height: 30px
+            right: 40px
+            top: 50%
+            transform: translateY(-50%)
+            border-radius: 50%
+            background: #ffffff
+            transition: all 0.3s ease 0s
+            cursor: pointer
+        &._active
+            &::before
+                background: rgba(87, 58, 194, 0.7)
+            &::after
+                background: #ffffff
+                right: 15px 
+        @media (max-width: $md4 + px)//Less 479
+            &::before
+                right: 10px
+                width: 45px
+                height: 30px
+            &::after
+                right: 32px
+                width: 20px
+                height: 20px             
     &__text
         font-size: 21px
-    
-
-    // .setting-main__check
-
+        @media (max-width: $md3 + px) //Less 768
+           @include adaptiv-value('font-size', 21, 17, 1)
     &__check
+        display: none
     
 

@@ -2,6 +2,19 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/components/generatePassword.js":
+/*!***********************************************!*\
+  !*** ./src/js/components/generatePassword.js ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+const generate = () => {};
+
+/* harmony default export */ __webpack_exports__["default"] = (generate);
+
+/***/ }),
+
 /***/ "./src/js/libs/dynamicAdaptive.js":
 /*!****************************************!*\
   !*** ./src/js/libs/dynamicAdaptive.js ***!
@@ -616,6 +629,40 @@ const burger = () => {// const btn = document.querySelector('.icon-menu'),
 
 /***/ }),
 
+/***/ "./src/js/modules/checkbox.js":
+/*!************************************!*\
+  !*** ./src/js/modules/checkbox.js ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+const checkBox = () => {
+  const checkBox = document.querySelectorAll('.setting-main__item');
+  checkBox.forEach(item => {
+    const input = item.querySelector('input');
+
+    if (input.checked == true) {
+      item.classList.add('_active');
+    }
+
+    item.addEventListener('click', function (e) {
+      if (item.classList.contains('_active')) {
+        input.checked = false;
+        console.log("Set fasle");
+      } else {
+        input.checked = true;
+        console.log("Set true");
+      }
+
+      item.classList.toggle('_active');
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (checkBox);
+
+/***/ }),
+
 /***/ "./src/js/services/default.js":
 /*!************************************!*\
   !*** ./src/js/services/default.js ***!
@@ -734,6 +781,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libs_dynamicAdaptive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./libs/dynamicAdaptive */ "./src/js/libs/dynamicAdaptive.js");
 /* harmony import */ var _services_default__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/default */ "./src/js/services/default.js");
 /* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/burger */ "./src/js/modules/burger.js");
+/* harmony import */ var _modules_checkbox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/checkbox */ "./src/js/modules/checkbox.js");
+/* harmony import */ var _components_generatePassword__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/generatePassword */ "./src/js/components/generatePassword.js");
 //////////// def
 
 
@@ -741,12 +790,16 @@ __webpack_require__.r(__webpack_exports__);
  ////////////
 ///////////Own
 
+
+
  ///////////
 // import getResource from './services/request'
 
 window.onload = function () {
   (0,_services_default__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  (0,_modules_burger__WEBPACK_IMPORTED_MODULE_4__["default"])(); // spoller();
+  (0,_modules_burger__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  (0,_modules_checkbox__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_components_generatePassword__WEBPACK_IMPORTED_MODULE_6__["default"])(); // spoller();
   // slider();
   // dynamicAdaptive();
 };

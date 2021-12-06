@@ -8,7 +8,8 @@ import def from './services/default';
 
 ///////////Own
 import burger from './modules/burger';
-
+import checkBox from './modules/checkbox';
+import generate from './components/generatePassword';
 
 
 ///////////
@@ -20,8 +21,9 @@ import burger from './modules/burger';
 window.onload = function (){
     def();
     burger();
-
+    checkBox();
+    generate();
     // spoller();
     // slider();
     // dynamicAdaptive();
-}
+};
